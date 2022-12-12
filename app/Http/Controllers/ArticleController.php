@@ -21,6 +21,9 @@ class ArticleController extends Controller
     public function index()
     {
         $currentPage = request('page');
+        if ($currentPage == 0) {
+            $currentPage = 1;
+        }
         $articles = Cache::remember('articles:all'.$currentPage, 2000, function(){
             return Article::latest()->paginate(5);
         });
