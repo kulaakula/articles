@@ -17,7 +17,7 @@
                                 <td><a href="/articles/{{$article->id}}">{{$article->name}}</a></td>
                                 <td>{{$article['desc']}}</td>
                                 <td><a href="/gallery/{{$article['full_image']}}">
-                                        <img src="{{URL::asset($article['preview_image'])}}"
+                                        <img src="/{{$article['preview_image']}}"
                                              alt="" height="100" width="100">
                                     </a></td>
 {{--                <th scope="row">{{$article['date']}}</th>--}}
